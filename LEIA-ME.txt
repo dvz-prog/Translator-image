@@ -1,0 +1,26 @@
+TRADUTOR DE IMAGENS - APK (Android)
+
+O app é um mini navegador. Você abre o site dentro dele e as imagens são traduzidas
+ali mesmo, por cima da imagem, sem baixar nem salvar nada.
+
+COMO GERAR O APK (GitHub Actions, sem instalar nada no PC):
+1. Crie um repositório novo no GitHub.
+2. Envie TODOS os arquivos desta pasta para a branch main, mantendo a estrutura
+   (incluindo a pasta oculta .github/workflows/build.yml).
+3. Abra a aba Actions > "Build APK". Se não iniciar sozinho, clique em "Run workflow".
+4. Quando terminar (uns 5 a 10 minutos), abra a execução e baixe o artefato
+   "tradutor-imagens-apk". Dentro dele está o app-debug.apk.
+5. Instale no celular (permita "instalar apps de fontes desconhecidas").
+
+COMO USAR:
+- Menu (⋮) > "Traduzir automaticamente neste site": traduz conforme você rola a página.
+- Menu (⋮) > "Traduzir imagens desta página": traduz as imagens visíveis e próximas.
+- Segure o dedo numa imagem > "Traduzir esta imagem".
+- Botão "T" no canto da imagem mostra/oculta a tradução.
+- Menu (⋮) > "Traduzir para…" e "Idioma do texto na imagem…" ajustam os idiomas.
+
+OBSERVAÇÕES:
+- O OCR roda no aparelho (ML Kit: japonês, coreano, chinês e alfabeto latino).
+  O app fica grande (modelos embutidos). A tradução do texto usa a internet.
+- Este código não foi compilado no ambiente em que foi escrito; se o build falhar
+  no GitHub, copie o erro do log da Action e envie para corrigir.
